@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <p><a href="/">HOME</a> </p>
+
+{% for x in mymembers %}
+  <li> {{ x.firstname }} </li>
+{% endfor %}
+
+<ul>
+  {% for x in mymembers %}
+    <li>{{ forloop.counter }} espacio {{ x.firstname }}</li>
+  {% endfor %}
+</ul>
+
+
+</body>
+</html>
