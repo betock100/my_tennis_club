@@ -1,14 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-
+<div class="topnav">
+  <a href = "/">HOME<a> |
+  <a href = "/members">MEMBERS</a>
+</div>
 
 
 {% block content %}
 {% endblock %}
+
+{% comment "comment from this point down" %}
+
+  <h1> Below only footer content </h1>
+{% endcomment %}
+{% include 'footer.html' %}
 
 </body>
 </html>
